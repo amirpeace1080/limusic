@@ -1,0 +1,26 @@
+{
+  "name": "limusic",
+  "version": "1.0.0",
+  "description": "My wonderful Nuxt.js project",
+  "author": "amirpeace1080",
+  "private": true,
+  "scripts": {
+    "dev": "nuxt",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxtjs/axios": "^5.11.0",
+    "axios": "^0.19.2",
+    "bootstrap-css-only": "^4.4.1",
+    "bootstrap-vue": "^2.15.0",
+    "mdbvue": "^6.7.1",
+    "nuxt": "^2.0.0",
+    "vuetify-rtl-style": "^0.2.3",
+    "vuex": "^3.4.0"
+  },
+  "devDependencies": {
+    "@nuxtjs/vuetify": "^1.0.0"
+  }
+}
