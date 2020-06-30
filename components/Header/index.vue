@@ -118,7 +118,7 @@
     <!-- end navbar -->
 
     <!-- start list bartarin ahangha -->
-    <div class="container bg-white mt-3">
+    <div class="container mt-3">
       <!-- start row -->
       <v-container>
         <v-row>
@@ -126,32 +126,20 @@
           <v-col lg="1" class="d-none d-md-block"></v-col>
           <!-- end space -->
           <v-col cols="4" lg="2" sm="4">
-            <div class="border" style="width:90%">
-
-            </div>
+            <div class="border" style="width:90%"></div>
           </v-col>
           <v-col cols="4" lg="2" sm="4">
-            <div class="border" style="width:90%">
-
-            </div>
+            <div class="border" style="width:90%"></div>
           </v-col>
           <v-col cols="4" lg="2" sm="4">
-            <div class="border" style="width:90%">
-
-            </div>
+            <div class="border" style="width:90%"></div>
           </v-col>
           <v-col cols="4" lg="2" sm="4">
-            <div class="border" style="width:90%">
-
-            </div>
+            <div class="border" style="width:90%"></div>
           </v-col>
           <v-col cols="4" lg="2" sm="4">
-            <div class="border" style="width:90%">
-
-            </div>
+            <div class="border" style="width:90%"></div>
           </v-col>
-
-
         </v-row>
       </v-container>
       <!-- end row -->
