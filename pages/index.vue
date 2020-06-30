@@ -19,18 +19,47 @@
                   :key="music.title"
                 >
                   <!-- start main all -->
-                  <div style="width:100%; height:500px">
+                  <div style="width:100%; height:832px">
                     <!-- start title music -->
                     <div>
                       <span class="fa fa-music fa-1x" style="color:blue"></span>
                       <nuxt-link to="">
-                        <span class="size"> {{ music.title }} </span>
+                        <span class="size-title"> {{ music.title }} </span>
                       </nuxt-link>
                     </div>
                     <!-- end title music -->
-                    <br>
-                    <hr class="mt-3" style="border:2px solid #265379; border-radius:3px">
+                    <br />
+                    <hr
+                      class="mt-3"
+                      style="border:2px solid #265379; border-radius:3px"
+                    />
+                    <!-- start content music -->
+                    <span class="size-content"> {{ music.content }} </span>
+                    <!-- end content music -->
 
+                    <!-- start pic -->
+                    <img class="size-img" :src="music.pic" :alt="music.title" />
+                    <!-- end pic -->
+
+                    <!-- start edame matlab -->
+                    <nuxt-link to="">
+                      <p class="size-edame-matlab text-center">ادامه مطلب</p>
+                    </nuxt-link>
+                    <!-- end edame matlab -->
+
+                    <!-- start audio -->
+                    <audio
+                      controls
+                      class="size-sound"
+                      :src="music.sound"
+                    ></audio>
+                    <!-- end audio -->
+
+                    <img
+                      class="img-specter"
+                      src="https://tabanmusic.com//wp-content/uploads/seprator.png"
+                      alt=""
+                    />
                   </div>
                   <!-- end main all -->
                 </div>
@@ -74,7 +103,41 @@ export default {
 </script>
 
 <style scoped>
-.size{
+.size-title{
   font-size: 16px;
+}
+.size-content{
+  font-size: 12px;
+  font-weight: bold;
+}
+.size-img{
+  margin-top: 20px;
+  height:450px;
+  width: 80%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.size-edame-matlab{
+font-size: 12px;
+margin-top: 20px;
+color: black;
+}
+.size-edame-matlab:hover{
+color: rgb(211, 241, 76);
+}
+.size-sound{
+  width: 100%; cursor:pointer;
+   border: 1px dashed rgb(142, 65, 181);
+   border-radius: 24px;
+}
+.img-specter{
+  width:100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  margin: 30px 0;
+  border: 0;
 }
 </style>
