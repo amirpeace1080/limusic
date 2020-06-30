@@ -13,15 +13,24 @@
           <div>
             <div class="container-fluid">
               <div class="row">
-                <div class="col-12 border mt-3"  >
+                <div
+                  class="col-12 border mt-3 bg-white"
+                  v-for="music in musics.music"
+                  :key="music.title"
+                >
                   <!-- start main all -->
                   <div style="width:100%; height:500px">
                     <!-- start title music -->
                     <div>
-                      <span class="fa fa-music fa-2x" style="color:blue"></span>
-                      <span > {{ musics }} </span>
+                      <span class="fa fa-music fa-1x" style="color:blue"></span>
+                      <nuxt-link to="">
+                        <span class="size"> {{ music.title }} </span>
+                      </nuxt-link>
                     </div>
                     <!-- end title music -->
+                    <br>
+                    <hr class="mt-3" style="border:2px solid #265379; border-radius:3px">
+
                   </div>
                   <!-- end main all -->
                 </div>
@@ -51,12 +60,11 @@ export default {
     listAhang
   },
   data() {
-    return {
-    };
+    return {};
   },
   computed: {
     musics() {
-      return this.$store.state.musics
+      return this.$store.state.musics;
     }
   },
   created() {
@@ -65,4 +73,8 @@ export default {
 };
 </script>
 
-<style scoped></style>
+<style scoped>
+.size{
+  font-size: 16px;
+}
+</style>
