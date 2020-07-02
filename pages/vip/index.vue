@@ -13,11 +13,13 @@
           <div>
             <div class="container-fluid">
               <div class="row">
-                <div class="col-12 border mt-3 bg-white"
-                v-for="remix in remix.remix"
-                :key="remix.title">
+                <div
+                  class="col-12 border mt-3 bg-white"
+                  v-for="remix in remix.remix"
+                  :key="remix.title"
+                >
                   <!-- start main all -->
-                  <div style="width:100%; height:600px">
+                  <div style="width:100%; height:650px">
                     <!-- start title music -->
                     <div>
                       <span class="fa fa-music fa-1x" style="color:blue"></span>
@@ -36,14 +38,36 @@
                     <!-- end content music -->
 
                     <!-- start pic -->
-                    <img class="size-img" :src="remix.pic" :title="remix.title"/>
+                    <img
+                      class="size-img"
+                      :src="remix.pic"
+                      :title="remix.title"
+                    />
                     <!-- end pic -->
 
                     <!-- start audio -->
-                    <audio controls class="size-sound" :src="remix.sound"></audio>
+                    <audio
+                      controls
+                      class="size-sound"
+                      :src="remix.sound"
+                    ></audio>
                     <!-- end audio -->
 
-                    
+                    <!-- start download 128 -->
+                    <div class="mt-4">
+                      <a class="btn down-music" :href="remix.dow128">
+                        دانلود آهنگ با کیفیت خوب 128
+                      </a>
+                    </div>
+                    <!-- end download 128 -->
+
+                    <!-- start download 320 -->
+                    <div>
+                      <a class="btn down-music" :href="remix.dow320">
+                        دانلود آهنگ با کیفیت عالی 320
+                      </a>
+                    </div>
+                    <!-- end download 320 -->
                   </div>
                   <!-- end main all -->
                 </div>
@@ -83,38 +107,54 @@ export default {
 };
 </script>
 
-
 <style scoped>
-.size-title{
+.down-music {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 48px;
+  width: 419.188px;
+  font-size: 15px;
+  background-color: #777777;
+  color: #fff;
+  border-radius: 12px;
+}
+
+.down-music:hover {
+  background-color: #151f26;
+}
+
+.size-title {
   font-size: 16px;
 }
-.size-content{
+.size-content {
   font-size: 12px;
   font-weight: bold;
 }
-.size-img{
+.size-img {
   margin-top: 20px;
-  height:300px;
+  height: 300px;
   width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;
 }
-.size-edame-matlab{
-font-size: 12px;
-margin-top: 20px;
-color: black;
+.size-edame-matlab {
+  font-size: 12px;
+  margin-top: 20px;
+  color: black;
 }
-.size-edame-matlab:hover{
-color: rgb(211, 241, 76);
+.size-edame-matlab:hover {
+  color: rgb(211, 241, 76);
 }
-.size-sound{
-  width: 100%; cursor:pointer;
-   border: 1px dashed rgb(142, 65, 181);
-   border-radius: 24px;
+.size-sound {
+  width: 100%;
+  cursor: pointer;
+  border: 1px dashed rgb(142, 65, 181);
+  border-radius: 24px;
 }
-.img-specter{
-  width:100%;
+.img-specter {
+  width: 100%;
   display: block;
   margin-left: auto;
   margin-right: auto;
