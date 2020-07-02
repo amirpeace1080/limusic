@@ -113,7 +113,7 @@ export default {
 .size-img{
   margin-top: 20px;
   height:450px;
-  width: 80%;
+  width: 90%;
   display: block;
   margin-left: auto;
   margin-right: auto;

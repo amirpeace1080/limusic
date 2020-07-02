@@ -1,41 +1,125 @@
 <template>
-    <div>
-        آهنگ های ویژه
+  <div>
+    <div class="container">
+      <div class="row">
+        <!-- start list khanandeha (for size large) -->
+        <div class="col-lg-3">
+          <listKhanandeh />
+        </div>
+        <!-- end list khanandeha (for size large) -->
 
-        <template>
-  <v-card>
-    <v-tabs
-      background-color="white"
-      color="deep-purple accent-4"
-      right
-    >
-      <v-tab>Landscape</v-tab>
-      <v-tab>City</v-tab>
-      <v-tab>Abstract</v-tab>
+        <!-- start main item -->
+        <div class="col-lg-6">
+          <div>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-12 border mt-3 bg-white"
+                v-for="remix in remix.remix"
+                :key="remix.title">
+                  <!-- start main all -->
+                  <div style="width:100%; height:600px">
+                    <!-- start title music -->
+                    <div>
+                      <span class="fa fa-music fa-1x" style="color:blue"></span>
+                      <nuxt-link to="">
+                        <span class="size-title"> {{ remix.title }} </span>
+                      </nuxt-link>
+                    </div>
+                    <!-- end title music -->
+                    <br />
+                    <hr
+                      class="mt-3"
+                      style="border:2px solid #265379; border-radius:3px"
+                    />
+                    <!-- start content music -->
+                    <span class="size-content"> {{ remix.content }} </span>
+                    <!-- end content music -->
 
-      <v-tab-item
-        v-for="n in 3"
-        :key="n"
-      >
-        <v-container fluid>
-          <v-row>
-            <v-col
-              v-for="i in 6"
-              :key="i"
-              cols="12"
-              md="4"
-            >
-              <v-img
-                :src="`https://picsum.photos/500/300?image=${i * n * 5 + 10}`"
-                :lazy-src="`https://picsum.photos/10/6?image=${i * n * 5 + 10}`"
-                aspect-ratio="1"
-              ></v-img>
-            </v-col>
-          </v-row>
-        </v-container>
-      </v-tab-item>
-    </v-tabs>
-  </v-card>
-</template>
+                    <!-- start pic -->
+                    <img class="size-img" :src="remix.pic" :title="remix.title"/>
+                    <!-- end pic -->
+
+                    <!-- start audio -->
+                    <audio controls class="size-sound" :src="remix.sound"></audio>
+                    <!-- end audio -->
+
+                    
+                  </div>
+                  <!-- end main all -->
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end main item  -->
+
+        <!-- start ahang hay bartar -->
+        <div class="col-lg-3">
+          <listAhang />
+        </div>
+        <!-- end ahang hay bartar -->
+      </div>
     </div>
+  </div>
 </template>
+
+<script>
+import listKhanandeh from "./../../components/listKhanandeh";
+import listAhang from "./../../components/listAhang";
+
+export default {
+  components: {
+    listKhanandeh,
+    listAhang
+  },
+  computed: {
+    remix() {
+      return this.$store.state.remix;
+    }
+  },
+  created() {
+    this.$store.dispatch("loadRemix");
+  }
+};
+</script>
+
+
+<style scoped>
+.size-title{
+  font-size: 16px;
+}
+.size-content{
+  font-size: 12px;
+  font-weight: bold;
+}
+.size-img{
+  margin-top: 20px;
+  height:300px;
+  width: 90%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.size-edame-matlab{
+font-size: 12px;
+margin-top: 20px;
+color: black;
+}
+.size-edame-matlab:hover{
+color: rgb(211, 241, 76);
+}
+.size-sound{
+  width: 100%; cursor:pointer;
+   border: 1px dashed rgb(142, 65, 181);
+   border-radius: 24px;
+}
+.img-specter{
+  width:100%;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  height: 50px;
+  margin: 30px 0;
+  border: 0;
+}
+</style>
