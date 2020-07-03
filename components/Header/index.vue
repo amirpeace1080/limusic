@@ -126,19 +126,49 @@
           <v-col lg="1" class="d-none d-md-block"></v-col>
           <!-- end space -->
           <v-col cols="4" lg="2" sm="4">
-            <div class="border" style="width:90%"></div>
+            <div class="border bg-white" style="width:95%; height:150px">
+              <nuxt-link to="">
+                <img
+                  src="https://upmusics.com/wp-content/uploads/2020/07/Mohsen-Ebrahimzadeh-Pantomime-130x130.jpg"
+                  style="height:120px; width:100%"
+                />
+                <p class="font-title-ahang" style="heigth:30px; width:100%">
+                  محسن ابراهیم زاده پانتومیم
+                </p>
+              </nuxt-link>
+            </div>
           </v-col>
           <v-col cols="4" lg="2" sm="4">
-            <div class="border" style="width:90%"></div>
+            <div class="border bg-white" style="width:95%; height:150px">
+              <nuxt-link to="">
+                <img src="https://upmusics.com/wp-content/uploads/2020/06/vcbn-130x130.jpg" style="height:120px; width:100%" />
+                <p class="font-title-ahang" style="heigth:30px; width:100%">محمد علیزاده خنده هاتو قربون</p>
+              </nuxt-link>
+            </div>
           </v-col>
           <v-col cols="4" lg="2" sm="4">
-            <div class="border" style="width:90%"></div>
+            <div class="border bg-white" style="width:95%; height:150px">
+              <nuxt-link to="">
+                <img src="https://upmusics.com/wp-content/uploads/2020/07/Ali-Afaghi-Sheare-Nafasgir.jpg" style="height:120px; width:100%" />
+                <p class="font-title-ahang" style="heigth:30px; width:100%">علی آقافی شعر نفس گیر</p>
+              </nuxt-link>
+            </div>
           </v-col>
           <v-col cols="4" lg="2" sm="4">
-            <div class="border" style="width:90%"></div>
+            <div class="border bg-white" style="width:95%; height:150px">
+              <nuxt-link to="">
+                <img src="https://upmusics.com/wp-content/uploads/2020/06/photo_2020-06-26_18-21-55-130x130.jpg" style="height:120px; width:100%" />
+                <p class="font-title-ahang" style="heigth:30px; width:100%">مهرداد جم چرا ساکتی</p>
+              </nuxt-link>
+            </div>
           </v-col>
           <v-col cols="4" lg="2" sm="4">
-            <div class="border" style="width:90%"></div>
+            <div class="border bg-white" style="width:95%; height:150px">
+              <nuxt-link to="">
+                <img src="https://upmusics.com/wp-content/uploads/2020/06/awr-3-130x130.jpg" style="height:120px; width:100%" />
+                <p class="font-title-ahang" style="heigth:30px; width:100%">علی زند وکیلی آقازاده</p>
+              </nuxt-link>
+            </div>
           </v-col>
         </v-row>
       </v-container>
@@ -168,5 +198,11 @@ export default {
 
 .item-hover:hover {
   background-color: red;
+}
+
+.font-title-ahang {
+  font-size: 11px;
+  color: black;
+  text-align: center;
 }
 </style>

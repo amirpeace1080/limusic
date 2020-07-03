@@ -113,7 +113,7 @@ export default {
   margin-left: auto;
   margin-right: auto;
   height: 48px;
-  width: 419.188px;
+  width: 70%;
   font-size: 15px;
   background-color: #777777;
   color: #fff;
